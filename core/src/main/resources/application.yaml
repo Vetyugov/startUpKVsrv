@@ -1,0 +1,30 @@
+server:
+  port: 8190
+  servlet:
+    context-path: /KV
+  error:
+    include-message: always
+    include-binding-errors: always
+    include-stacktrace: on_param
+    include-exception: false
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/kv_startUp
+    username: kv_admin
+    password: kv_admin
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+logging:
+  level:
+    root: info
+    ru.get: debug
+    org.springframework.web: info
+    org.hibernate: error
+  file:
+    name: ./Logs/core.log
+  charset:
+    console: UTF-8
+    file: UTF-8
