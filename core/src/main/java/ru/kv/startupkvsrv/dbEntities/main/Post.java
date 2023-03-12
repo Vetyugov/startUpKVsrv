@@ -27,7 +27,7 @@ public class Post {
     private String desc;
 
     @OneToMany(mappedBy = "post")
-    private Set<Image> images = new LinkedHashSet<>();
+    private Set<PostImage> postImages = new LinkedHashSet<>();
 
     @ManyToOne(fetch = FetchType.EAGER, optional = false)
     @JoinColumn(name = "location_id", nullable = false, referencedColumnName = "location_id")

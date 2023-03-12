@@ -1,7 +1,7 @@
 server:
-  port: 8190
+  port: 8166
   servlet:
-    context-path: /web-core-service
+    context-path: /web-images-service
   error:
     include-message: always
     include-binding-errors: always
@@ -9,7 +9,7 @@ server:
     include-exception: false
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/kv_startUp
+    url: jdbc:postgresql://localhost:5432/kv_startUp_images
     username: kv_admin
     password: kv_admin
     driver-class-name: org.postgresql.Driver
@@ -17,14 +17,6 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: validate
-
-integrations:
-  images-service:
-    url: http://localhost:5555/imagesMS
-    connect-timeout: 2000
-    read-timeout: 10000
-    write-timeout: 2000
-
 logging:
   level:
     root: info

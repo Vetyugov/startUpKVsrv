@@ -1,4 +1,4 @@
-package ru.kv.startupkvsrv.dto;
+package ru.kv.startupkvsrv.publuc.dto;
 
 import lombok.Builder;
 import lombok.Data;
@@ -10,6 +10,6 @@ import java.util.List;
 public class PostNewRq {
     private Long locationId;
     private String desc;
-    private List<ImageDTO> images;
+    private List<ImageNewRq> images;
     private Long userId;
 }

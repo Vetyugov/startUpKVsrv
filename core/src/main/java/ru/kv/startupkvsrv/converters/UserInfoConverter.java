@@ -1,8 +1,8 @@
 package ru.kv.startupkvsrv.converters;
 
 import ru.kv.startupkvsrv.dbEntities.main.UserInfo;
-import ru.kv.startupkvsrv.dto.UserInfoRq;
-import ru.kv.startupkvsrv.dto.UserInfoRs;
+import ru.kv.startupkvsrv.publuc.dto.UserInfoRq;
+import ru.kv.startupkvsrv.publuc.dto.UserInfoRs;
 
 public class UserInfoConverter {
     public static UserInfoRs userInfoToResponse(UserInfo userInfo){

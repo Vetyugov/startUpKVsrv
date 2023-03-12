@@ -7,10 +7,10 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import ru.kv.startupkvsrv.dto.UserInfoRq;
-import ru.kv.startupkvsrv.dto.UserInfoRs;
-import ru.kv.startupkvsrv.exceptions.AlreadyExistException;
-import ru.kv.startupkvsrv.exceptions.NotFoundException;
+import ru.kv.startupkvsrv.publuc.exceptions.AlreadyExistException;
+import ru.kv.startupkvsrv.publuc.exceptions.NotFoundException;
+import ru.kv.startupkvsrv.publuc.dto.UserInfoRq;
+import ru.kv.startupkvsrv.publuc.dto.UserInfoRs;
 import ru.kv.startupkvsrv.services.UserInfoService;
 
 @Tag(name = "Информация о пользователе")

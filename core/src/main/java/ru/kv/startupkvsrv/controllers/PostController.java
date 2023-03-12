@@ -8,9 +8,9 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import ru.kv.startupkvsrv.dto.PostNewRq;
-import ru.kv.startupkvsrv.dto.PostRs;
-import ru.kv.startupkvsrv.exceptions.NotFoundException;
+import ru.kv.startupkvsrv.publuc.exceptions.NotFoundException;
+import ru.kv.startupkvsrv.publuc.dto.PostNewRq;
+import ru.kv.startupkvsrv.publuc.dto.PostRs;
 import ru.kv.startupkvsrv.services.PostService;
 
 import java.util.List;

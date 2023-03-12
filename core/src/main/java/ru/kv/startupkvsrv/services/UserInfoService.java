@@ -5,9 +5,9 @@ import org.springframework.stereotype.Service;
 import org.webjars.NotFoundException;
 import ru.kv.startupkvsrv.converters.UserInfoConverter;
 import ru.kv.startupkvsrv.dbEntities.main.UserInfo;
-import ru.kv.startupkvsrv.dto.UserInfoRq;
-import ru.kv.startupkvsrv.dto.UserInfoRs;
-import ru.kv.startupkvsrv.exceptions.AlreadyExistException;
+import ru.kv.startupkvsrv.publuc.exceptions.AlreadyExistException;
+import ru.kv.startupkvsrv.publuc.dto.UserInfoRq;
+import ru.kv.startupkvsrv.publuc.dto.UserInfoRs;
 import ru.kv.startupkvsrv.repositories.UserInfoRepository;
 
 @Service
@@ -29,7 +29,7 @@ public class UserInfoService {
         return UserInfoConverter.userInfoToResponse(saved);
     }
 
-    public UserInfoRs update(UserInfoRq userInfoRq, Long userInfoId) throws ru.kv.startupkvsrv.exceptions.NotFoundException {
+    public UserInfoRs update(UserInfoRq userInfoRq, Long userInfoId) throws ru.kv.startupkvsrv.publuc.exceptions.NotFoundException {
         if (userInfoId == null || userInfoRepository.findById(userInfoId).isPresent()) {
             throw new NotFoundException("User with id = " + userInfoId + "not found");
         }

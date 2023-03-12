@@ -1,5 +1,4 @@
-package ru.kv.startupkvsrv.dto;
-
+package ru.kv.startupkvsrv.publuc.dto;
 import lombok.Builder;
 import lombok.Data;
 

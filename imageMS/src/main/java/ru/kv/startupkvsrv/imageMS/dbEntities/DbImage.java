@@ -1,4 +1,4 @@
-package ru.kv.startupkvsrv.dbEntities.main;
+package ru.kv.startupkvsrv.imageMS.dbEntities;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -10,16 +10,12 @@ import lombok.*;
 @Getter
 @Setter
 @Entity
-@Table(name = "image", schema = "main_app")
-public class Image {
+@Table(name = "image", schema = "main_app_images")
+public class DbImage {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "image_id", nullable = false)
     private Long id;
-
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "post_id", nullable = false)
-    private Post post;
 
     @Column(name = "image", nullable = false)
     private byte[] image;

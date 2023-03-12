@@ -1,4 +1,4 @@
-package ru.kv.startupkvsrv.dto;
+package ru.kv.startupkvsrv.publuc.dto;
 
 import lombok.Builder;
 import lombok.Data;
@@ -12,7 +12,7 @@ public class PostRs {
     private Long id;
     private String location;
     private String desc;
-    private List<ImageDTO> images;
+    private List<Long> images;
     private UserInfoRs user;
     private Instant createTime;
 }
